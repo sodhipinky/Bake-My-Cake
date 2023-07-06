@@ -11,6 +11,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {ProductViewComponent} from './components/product-view/product-view.component';
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
 	declarations: [
@@ -22,6 +24,8 @@ import {ProductViewComponent} from './components/product-view/product-view.compo
 		BrowserModule,
 		AppRoutingModule,
 		BrowserAnimationsModule,
+		HttpClientModule,
+		FormsModule,
 		MatToolbarModule,
 		MatButtonModule,
 		MatSidenavModule,
