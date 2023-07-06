@@ -13,12 +13,14 @@ import {MatListModule} from '@angular/material/list';
 import {ProductViewComponent} from './components/product-view/product-view.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import {ProductCardComponent} from './components/product-card/product-card.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		HeaderComponent,
-		ProductViewComponent
+		ProductViewComponent,
+		ProductCardComponent
 	],
 	imports: [
 		BrowserModule,
