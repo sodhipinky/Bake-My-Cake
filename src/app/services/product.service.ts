@@ -13,6 +13,6 @@ export class ProductService {
 	}
 
 	getAllProducts(): Observable<Array<Product>> {
-		return this.httpClient.get<Array<Product>>(url);
+		return this.httpClient.get<Array<Product>>(this.url);
 	}
 }
