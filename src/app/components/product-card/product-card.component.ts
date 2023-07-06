@@ -8,6 +8,6 @@ import {Product} from "../../models/product.model";
 })
 export class ProductCardComponent {
 	@Input()
-	products: Product[] = [];
+	product: Product = {};
 
 }
