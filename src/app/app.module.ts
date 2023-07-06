@@ -14,6 +14,8 @@ import {ProductViewComponent} from './components/product-view/product-view.compo
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import {ProductCardComponent} from './components/product-card/product-card.component';
+import {MatCardModule} from "@angular/material/card";
+import {MatDividerModule} from "@angular/material/divider";
 
 @NgModule({
 	declarations: [
@@ -32,7 +34,9 @@ import {ProductCardComponent} from './components/product-card/product-card.compo
 		MatButtonModule,
 		MatSidenavModule,
 		MatIconModule,
-		MatListModule
+		MatListModule,
+		MatCardModule,
+		MatDividerModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
