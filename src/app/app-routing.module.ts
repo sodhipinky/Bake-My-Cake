@@ -6,6 +6,11 @@ const routes: Routes = [
 	{
 		path: 'allProducts',
 		component: ProductViewComponent
+	},
+	{
+		path: '',
+		redirectTo: 'allProducts',
+		pathMatch: 'full'
 	}
 ];
 
