@@ -18,6 +18,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatDividerModule} from "@angular/material/divider";
 import {FilterProductComponent} from './components/filter-product/filter-product.component';
 import {MatSelectModule} from "@angular/material/select";
+import {SearchProductComponent} from './components/search-product/search-product.component';
 
 @NgModule({
 	declarations: [
@@ -25,7 +26,8 @@ import {MatSelectModule} from "@angular/material/select";
 		HeaderComponent,
 		ProductViewComponent,
 		ProductCardComponent,
-		FilterProductComponent
+		FilterProductComponent,
+		SearchProductComponent
 	],
 	imports: [
 		BrowserModule,
