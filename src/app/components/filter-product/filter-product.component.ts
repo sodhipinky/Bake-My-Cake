@@ -10,4 +10,8 @@ export class FilterProductComponent {
 
 	@Output()
 	filterProductEvent: EventEmitter<string> = new EventEmitter<string>();
+
+	filterProduct() {
+		this.filterProductEvent.emit(this.category);
+	}
 }
