@@ -1,1 +1,9 @@
-<p>product-card works!</p>
+<mat-card class="card" style="width:20rem;">
+	<mat-card-header>
+		<mat-card-title class="text-capitalize mb-2" style="font-size:22px;">{{product.name}}</mat-card-title>
+	</mat-card-header>
+	<mat-card-content>
+		<img alt="{{product.imageUrl}}" class="card-img-top mb-2" mat-card-image src="{{product.imageUrl}}">
+		<p class="text-center" style="font-size:18px;">₹. {{product.price}} per {{product.unit}}</p>
+	</mat-card-content>
+</mat-card>
