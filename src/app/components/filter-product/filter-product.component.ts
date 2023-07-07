@@ -6,12 +6,21 @@ import {Component, EventEmitter, Output} from '@angular/core';
 	styleUrls: ['./filter-product.component.css']
 })
 export class FilterProductComponent {
-	category: string = ''
+	categories: string[] = [
+		'Brownie',
+		'Cake',
+		'Cheesecake',
+		'Chocolate',
+		'Cookie',
+		'Cupcake',
+		'Muffin'
+	]
+	selectedCategory: string = ''
 
 	@Output()
 	filterProductEvent: EventEmitter<string> = new EventEmitter<string>();
 
 	filterProduct() {
-		this.filterProductEvent.emit(this.category);
+		this.filterProductEvent.emit(this.selectedCategory);
 	}
 }
