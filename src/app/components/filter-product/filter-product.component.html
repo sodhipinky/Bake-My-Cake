@@ -1,5 +1,5 @@
 <mat-form-field appearance="outline">
-	<mat-label>Select Category</mat-label>
+	<mat-label class="fw-bold">Select Category</mat-label>
 	<mat-select [(ngModel)]="selectedCategory">
 		<mat-option *ngFor="let category of categories" [value]="category">
 			{{category}}
