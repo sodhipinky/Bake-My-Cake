@@ -17,6 +17,7 @@ import {ProductCardComponent} from './components/product-card/product-card.compo
 import {MatCardModule} from "@angular/material/card";
 import {MatDividerModule} from "@angular/material/divider";
 import {FilterProductComponent} from './components/filter-product/filter-product.component';
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
 	declarations: [
@@ -38,7 +39,8 @@ import {FilterProductComponent} from './components/filter-product/filter-product
 		MatIconModule,
 		MatListModule,
 		MatCardModule,
-		MatDividerModule
+		MatDividerModule,
+		MatSelectModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
