@@ -7,6 +7,7 @@ import {Component, EventEmitter, Output} from '@angular/core';
 })
 export class FilterProductComponent {
 	categories: string[] = [
+		'All',
 		'Brownie',
 		'Cake',
 		'Cheesecake',
