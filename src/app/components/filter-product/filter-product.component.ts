@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
 	selector: 'app-filter-product',
@@ -6,5 +6,8 @@ import {Component} from '@angular/core';
 	styleUrls: ['./filter-product.component.css']
 })
 export class FilterProductComponent {
+	category: string = ''
 
+	@Output()
+	filterProductEvent: EventEmitter<string> = new EventEmitter<string>();
 }
