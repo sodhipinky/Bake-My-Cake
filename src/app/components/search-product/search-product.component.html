@@ -1,1 +1,4 @@
-<p>search-product works!</p>
+<mat-form-field appearance="outline">
+	<mat-label>Search</mat-label>
+	<input (change)="searchProducts()" [(ngModel)]="searchedProductName" matInput type="text">
+</mat-form-field>
