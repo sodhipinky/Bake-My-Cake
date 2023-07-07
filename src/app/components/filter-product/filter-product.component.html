@@ -1,1 +1,7 @@
-<p>filter-product works!</p>
+<mat-form-field>
+	<mat-select>
+		<mat-option *ngFor="let category of categories" [(ngModel)]="selectedCategory" [value]="category">
+			{{category}}
+		</mat-option>
+	</mat-select>
+</mat-form-field>
