@@ -37,17 +37,16 @@ export class ProductViewComponent implements OnInit {
 	}
 
 	onSearchProducts(searchedProductName: string) {
-		if (searchedProductName === '') {
-			this.productService.getAllProducts().subscribe(
-				(products) => {
-					this.products = products;
-				}
-			)
-			return;
-		}
-		this.productService.getProductsByName(searchedProductName).subscribe(
+		this.productService.getAllProducts().subscribe(
 			(products) => {
-				this.products = products;
+				if (searchedProductName === '') {
+					this.products = products;
+					return;
+				} else {
+					this.products = products.filter((product) => {
+						return product.name.toLowerCase().includes(searchedProductName.toLowerCase());
+					})
+				}
 			}
 		)
 	}
