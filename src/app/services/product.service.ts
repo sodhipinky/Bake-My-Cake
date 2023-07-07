@@ -19,4 +19,8 @@ export class ProductService {
 	getProductsByCategory(category: string): Observable<Array<Product>> {
 		return this.httpClient.get<Array<Product>>(this.url + '?category=' + category);
 	}
+
+	getProductsByName(name: string): Observable<Array<Product>> {
+		return this.httpClient.get<Array<Product>>(this.url + '?name=' + name);
+	}
 }
