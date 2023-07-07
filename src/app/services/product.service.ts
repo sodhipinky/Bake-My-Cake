@@ -16,7 +16,7 @@ export class ProductService {
 		return this.httpClient.get<Array<Product>>(this.url);
 	}
 
-	getProductByCategory(category: string): Observable<Array<Product>> {
+	getProductsByCategory(category: string): Observable<Array<Product>> {
 		return this.httpClient.get<Array<Product>>(this.url + '?category=' + category);
 	}
 }

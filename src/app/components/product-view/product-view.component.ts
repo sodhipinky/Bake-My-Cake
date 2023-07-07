@@ -19,4 +19,12 @@ export class ProductViewComponent implements OnInit {
 				this.products = products;
 			})
 	}
+
+	onFilterProducts(category: string) {
+		this.productService.getProductsByCategory(category).subscribe(
+			(products) => {
+				this.products = products;
+			}
+		)
+	}
 }
