@@ -16,13 +16,15 @@ import {FormsModule} from "@angular/forms";
 import {ProductCardComponent} from './components/product-card/product-card.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatDividerModule} from "@angular/material/divider";
+import {FilterProductComponent} from './components/filter-product/filter-product.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		HeaderComponent,
 		ProductViewComponent,
-		ProductCardComponent
+		ProductCardComponent,
+		FilterProductComponent
 	],
 	imports: [
 		BrowserModule,

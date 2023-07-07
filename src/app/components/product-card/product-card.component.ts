@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Product} from "../../models/product.model";
 
 @Component({
@@ -6,8 +6,24 @@ import {Product} from "../../models/product.model";
 	templateUrl: './product-card.component.html',
 	styleUrls: ['./product-card.component.css']
 })
-export class ProductCardComponent {
+export class ProductCardComponent implements OnInit {
 	@Input()
-	product: Product = {};
+	product: Product = {
+		id: 0,
+		name: '',
+		category: '',
+		imageUrl: '',
+		price: 0,
+		unit: '',
+		description: '',
+		rating: 0
+	};
 
+	ratingArray: number[] = [];
+
+	ngOnInit(): void {
+		for (let index = 1; index <= this.product.rating; index++) {
+			this.ratingArray.push(index);
+		}
+	}
 }
