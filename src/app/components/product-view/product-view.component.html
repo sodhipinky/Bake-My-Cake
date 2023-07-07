@@ -1,6 +1,6 @@
 <div class="container mt-3">
 	<div class="row row-cols-md-4 ms-1">
-		<app-filter-product></app-filter-product>
+		<app-filter-product (filterProductEvent)="onFilterProducts($event)"></app-filter-product>
 	</div>
 </div>
 <div class="container mt-3">

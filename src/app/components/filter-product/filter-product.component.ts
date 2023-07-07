@@ -20,7 +20,7 @@ export class FilterProductComponent {
 	@Output()
 	filterProductEvent: EventEmitter<string> = new EventEmitter<string>();
 
-	filterProduct() {
+	filterProducts() {
 		this.filterProductEvent.emit(this.selectedCategory);
 	}
 }
