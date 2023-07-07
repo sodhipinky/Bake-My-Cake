@@ -19,6 +19,8 @@ import {MatDividerModule} from "@angular/material/divider";
 import {FilterProductComponent} from './components/filter-product/filter-product.component';
 import {MatSelectModule} from "@angular/material/select";
 import {SearchProductComponent} from './components/search-product/search-product.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
 	declarations: [
@@ -42,7 +44,9 @@ import {SearchProductComponent} from './components/search-product/search-product
 		MatListModule,
 		MatCardModule,
 		MatDividerModule,
-		MatSelectModule
+		MatSelectModule,
+		MatFormFieldModule,
+		MatInputModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
