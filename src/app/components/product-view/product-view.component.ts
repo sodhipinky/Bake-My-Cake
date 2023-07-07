@@ -35,4 +35,20 @@ export class ProductViewComponent implements OnInit {
 			}
 		)
 	}
+
+	onSearchProducts(searchedProductName: string) {
+		if (searchedProductName === '') {
+			this.productService.getAllProducts().subscribe(
+				(products) => {
+					this.products = products;
+				}
+			)
+			return;
+		}
+		this.productService.getProductsByName(searchedProductName).subscribe(
+			(products) => {
+				this.products = products;
+			}
+		)
+	}
 }
