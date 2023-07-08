@@ -4,12 +4,12 @@ import {ProductViewComponent} from "./components/product-view/product-view.compo
 
 const routes: Routes = [
 	{
-		path: 'allProducts',
+		path: 'products',
 		component: ProductViewComponent
 	},
 	{
 		path: '',
-		redirectTo: 'allProducts',
+		redirectTo: 'products',
 		pathMatch: 'full'
 	}
 ];
