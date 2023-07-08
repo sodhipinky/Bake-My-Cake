@@ -23,6 +23,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatRippleModule} from "@angular/material/core";
 import {ProductDetailComponent} from './components/product-detail/product-detail.component';
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 @NgModule({
 	declarations: [
@@ -50,7 +51,8 @@ import {ProductDetailComponent} from './components/product-detail/product-detail
 		MatSelectModule,
 		MatFormFieldModule,
 		MatInputModule,
-		MatRippleModule
+		MatRippleModule,
+		MatTooltipModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

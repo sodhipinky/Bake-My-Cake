@@ -1,19 +1,11 @@
 <div class="container">
 	<div class="row mt-2">
 		<div class="col d-flex justify-content-start">
-			<a class="sticky-top" color="accent" extended mat-fab routerLink="/products">
+			<a color="accent" extended mat-fab routerLink="/products">
 				<mat-icon>arrow_back_ios</mat-icon>
 				Back
 			</a>
 		</div>
-		<div class="col d-flex justify-content-end">
-			<a class="sticky-top" color="accent" extended mat-fab routerLink="/products">
-				<mat-icon>arrow_forward_ios</mat-icon>
-				Checkout
-			</a>
-		</div>
-	</div>
-	<div class="row justify-content-center">
 		<div class="col-5">
 			<mat-card class="rounded-4">
 				<mat-card-header>
@@ -35,7 +27,24 @@
 				<mat-card-footer class="mt-2 mb-2">
 					<mat-icon *ngFor="let index of ratingArray" class="ms-2" color="primary">stars</mat-icon>
 				</mat-card-footer>
+				<mat-card-actions class="d-flex justify-content-around">
+					<button class="mb-4" color="warn" mat-fab matTooltip="Remove">
+						<mat-icon>remove</mat-icon>
+					</button>
+					<mat-form-field appearance="outline" class="col-8 ms-2 me-2">
+						<input matInput required type="text" value="1">
+					</mat-form-field>
+					<button class="mb-4" color="accent" mat-fab matTooltip="Add">
+						<mat-icon>add</mat-icon>
+					</button>
+				</mat-card-actions>
 			</mat-card>
+		</div>
+		<div class="col d-flex justify-content-end">
+			<a color="accent" extended mat-fab routerLink="/products">
+				<mat-icon>arrow_forward_ios</mat-icon>
+				Checkout
+			</a>
 		</div>
 	</div>
 </div>
