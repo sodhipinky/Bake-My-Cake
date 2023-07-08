@@ -1,17 +1,19 @@
-<mat-card class="card mb-5" style="height:25rem;box-shadow: 0 0 10px 0 rgba(10, 20, 30, 0.3);">
-	<mat-card-header>
-		<mat-card-title class="text-capitalize mb-2">
-			<h1 class="fw-bold" style="color: rebeccapurple">{{product.name}}</h1>
-		</mat-card-title>
-	</mat-card-header>
-	<mat-divider class="mb-2 mt-2"></mat-divider>
-	<mat-card-content class="mb-3" style="height:60%;">
-		<img alt="{{product.imageUrl}}" class="card-img-top mb-3" mat-card-image src="{{product.imageUrl}}"
-			 style="height:80%;">
-		<span class="fw-bold" style="font-size:1.2rem;">₹. {{product.price}} per {{product.unit}}</span>
-	</mat-card-content>
-	<mat-divider class="mb-2"></mat-divider>
-	<mat-card-footer class="ms-2">
-		<mat-icon *ngFor="let index of ratingArray" color="primary">stars</mat-icon>
-	</mat-card-footer>
-</mat-card>
+<a href="#" style="text-decoration: none;">
+	<mat-card class="card mb-5" style="height:25rem;box-shadow: 0 0 10px 0 rgba(10, 20, 30, 0.3);">
+		<mat-card-header>
+			<mat-card-title class="text-capitalize mb-2">
+				<h1 class="fw-bold" style="color: rebeccapurple">{{product.name}}</h1>
+			</mat-card-title>
+		</mat-card-header>
+		<mat-divider class="mb-2 mt-2"></mat-divider>
+		<mat-card-content class="mb-3" style="height:60%;">
+			<img alt="{{product.imageUrl}}" class="card-img-top mb-3" mat-card-image src="{{product.imageUrl}}"
+				 style="height:80%;">
+			<span class="fw-bold" style="font-size:1.2rem;">₹. {{product.price}} per {{product.unit}}</span>
+		</mat-card-content>
+		<mat-divider class="mb-2"></mat-divider>
+		<mat-card-footer class="ms-2">
+			<mat-icon *ngFor="let index of ratingArray" color="primary">stars</mat-icon>
+		</mat-card-footer>
+	</mat-card>
+</a>
