@@ -21,6 +21,7 @@ import {MatSelectModule} from "@angular/material/select";
 import {SearchProductComponent} from './components/search-product/search-product.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import {MatRippleModule} from "@angular/material/core";
 
 @NgModule({
 	declarations: [
@@ -46,7 +47,8 @@ import {MatInputModule} from "@angular/material/input";
 		MatDividerModule,
 		MatSelectModule,
 		MatFormFieldModule,
-		MatInputModule
+		MatInputModule,
+		MatRippleModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
