@@ -32,7 +32,7 @@
 						<mat-icon>remove</mat-icon>
 					</button>
 					<mat-form-field appearance="outline" class="col-8 ms-2 me-2">
-						<input matInput required type="text" value="1">
+						<input #quantity matInput name="quantity" required type="text" value="1">
 					</mat-form-field>
 					<button class="mb-4" color="accent" mat-fab matTooltip="Add">
 						<mat-icon>add</mat-icon>
@@ -41,7 +41,8 @@
 			</mat-card>
 		</div>
 		<div class="col d-flex justify-content-end">
-			<a color="accent" extended mat-fab routerLink="/products">
+			<a (click)="checkout(Number.parseInt(quantity.value))" color="accent" extended mat-fab
+			   routerLink="/products">
 				<mat-icon>arrow_forward_ios</mat-icon>
 				Checkout
 			</a>

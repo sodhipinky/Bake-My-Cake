@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {ProductService} from "../../services/product.service";
 import {Product} from "../../models/product.model";
 
@@ -11,9 +11,11 @@ import {Product} from "../../models/product.model";
 export class ProductDetailComponent implements OnInit {
 	product: Product | undefined;
 	ratingArray: number[] = [];
+	protected readonly Number = Number;
 
 	constructor(private activatedRoute: ActivatedRoute,
-				private productService: ProductService) {
+				private productService: ProductService,
+				private router: Router) {
 	}
 
 	ngOnInit(): void {
@@ -26,6 +28,9 @@ export class ProductDetailComponent implements OnInit {
 				}
 			});
 		});
+	}
 
+	checkout(quantity: number): void {
+		this.router.navigate(['/checkout', this.product?.id, quantity]);
 	}
 }
