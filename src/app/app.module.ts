@@ -24,6 +24,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatRippleModule} from "@angular/material/core";
 import {ProductDetailComponent} from './components/product-detail/product-detail.component';
 import {MatTooltipModule} from "@angular/material/tooltip";
+import {CheckoutComponent} from './components/checkout/checkout.component';
 
 @NgModule({
 	declarations: [
@@ -33,7 +34,8 @@ import {MatTooltipModule} from "@angular/material/tooltip";
 		ProductCardComponent,
 		FilterProductComponent,
 		SearchProductComponent,
-		ProductDetailComponent
+		ProductDetailComponent,
+		CheckoutComponent
 	],
 	imports: [
 		BrowserModule,
