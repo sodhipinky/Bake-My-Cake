@@ -1,15 +1,15 @@
 <div class="container mt-3">
-	<div class="row ms-1">
+	<div class="row">
 		<div class="col-md-4">
 			<app-filter-product (filterProductEvent)="onFilterProducts($event)"></app-filter-product>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-8">
 			<app-search-product (searchProductEvent)="onSearchProducts($event)"></app-search-product>
 		</div>
 	</div>
 </div>
 <div class="container mt-3">
-	<div class="row row-cols-md-3">
+	<div class="d-flex justify-content-center row row-cols-md-3">
 		<div *ngFor="let product of products" class="col">
 			<app-product-card [product]="product"></app-product-card>
 		</div>

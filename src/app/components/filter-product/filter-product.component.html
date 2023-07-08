@@ -1,4 +1,4 @@
-<mat-form-field appearance="outline">
+<mat-form-field appearance="outline" class="col-12">
 	<mat-label class="fw-bold">Select Category</mat-label>
 	<mat-select (focus)="filterProducts()" [(ngModel)]="selectedCategory">
 		<mat-option *ngFor="let category of categories" [value]="category">
