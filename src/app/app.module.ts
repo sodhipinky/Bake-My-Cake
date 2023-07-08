@@ -22,6 +22,7 @@ import {SearchProductComponent} from './components/search-product/search-product
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatRippleModule} from "@angular/material/core";
+import {ProductDetailComponent} from './components/product-detail/product-detail.component';
 
 @NgModule({
 	declarations: [
@@ -30,7 +31,8 @@ import {MatRippleModule} from "@angular/material/core";
 		ProductViewComponent,
 		ProductCardComponent,
 		FilterProductComponent,
-		SearchProductComponent
+		SearchProductComponent,
+		ProductDetailComponent
 	],
 	imports: [
 		BrowserModule,
