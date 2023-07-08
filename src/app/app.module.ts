@@ -25,6 +25,7 @@ import {MatRippleModule} from "@angular/material/core";
 import {ProductDetailComponent} from './components/product-detail/product-detail.component';
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {CheckoutComponent} from './components/checkout/checkout.component';
+import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
 
 @NgModule({
 	declarations: [
@@ -35,7 +36,8 @@ import {CheckoutComponent} from './components/checkout/checkout.component';
 		FilterProductComponent,
 		SearchProductComponent,
 		ProductDetailComponent,
-		CheckoutComponent
+		CheckoutComponent,
+		PageNotFoundComponent,
 	],
 	imports: [
 		BrowserModule,
