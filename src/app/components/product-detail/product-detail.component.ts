@@ -10,6 +10,7 @@ import {Product} from "../../models/product.model";
 })
 export class ProductDetailComponent implements OnInit {
 	product: Product | undefined;
+	ratingArray: number[] = [];
 
 	constructor(private activatedRoute: ActivatedRoute,
 				private productService: ProductService) {
@@ -20,7 +21,11 @@ export class ProductDetailComponent implements OnInit {
 			const id = params['id'];
 			this.productService.getProductById(id).subscribe(product => {
 				this.product = product;
+				for (let index = 1; index <= this.product.rating; index++) {
+					this.ratingArray.push(index);
+				}
 			});
 		});
+
 	}
 }

@@ -1,1 +1,35 @@
-<p>product-detail works!</p>
+<div class="container">
+	<div class="row mt-2">
+		<div class="col">
+			<a class="sticky-top" color="accent" extended mat-fab routerLink="/products">
+				<mat-icon>keyboard_backspace</mat-icon>
+				Back
+			</a>
+		</div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col-5">
+			<mat-card class="rounded-4">
+				<mat-card-header>
+					<mat-card-title>
+						<h1 class="fw-bold" style="color: rebeccapurple">{{product?.name}}</h1>
+					</mat-card-title>
+				</mat-card-header>
+				<mat-divider></mat-divider>
+				<mat-card-content class="mb-2 mt-2">
+					<img alt="{{product?.imageUrl}}" class="card-img-top img-fluid mb-3" mat-card-image
+						 src="{{product?.imageUrl}}">
+					<p class="fw-bold text-center" style="font-size:1.1rem; color: rebeccapurple">
+						₹. {{product?.price}}
+						per {{product?.unit}}</p>
+					<mat-divider></mat-divider>
+					<p class="mt-2 mb-2 fw-bold fs-5">{{product?.description}}</p>
+				</mat-card-content>
+				<mat-divider></mat-divider>
+				<mat-card-footer class="mt-2 mb-2">
+					<mat-icon *ngFor="let index of ratingArray" class="ms-2" color="primary">stars</mat-icon>
+				</mat-card-footer>
+			</mat-card>
+		</div>
+	</div>
+</div>
