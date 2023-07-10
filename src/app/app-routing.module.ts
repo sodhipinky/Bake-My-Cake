@@ -20,7 +20,7 @@ const routes: Routes = [
 		component: CheckoutComponent
 	},
 	{
-		path: '/login',
+		path: 'login',
 		component: LoginComponent
 	},
 	{
