@@ -36,6 +36,7 @@ export class CheckoutComponent implements OnInit {
 				this.product = product;
 				this.quantity = params['quantity'];
 				this.amount = this.product.price * this.quantity;
+				this.submitStatus = false;
 			});
 		});
 	}
@@ -58,7 +59,15 @@ export class CheckoutComponent implements OnInit {
 						verticalPosition: 'top'
 					});
 				})
-			this.router.navigate(['/products']);
 		});
+		this.router.navigate(['/products']);
+		this.submitStatus = true;
+	}
+
+	isSubmitted(): boolean {
+		if (!this.submitStatus) {
+			return confirm('Oops! You have not placed the order yet. Are you sure you want to leave?');
+		}
+		return true;
 	}
 }
