@@ -30,6 +30,7 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {LoginComponent} from './components/login/login.component';
 import {OrderViewComponent} from './components/order-view/order-view.component';
 import {MatTableModule} from "@angular/material/table";
+import {FooterComponent} from './components/footer/footer.component';
 
 @NgModule({
 	declarations: [
@@ -44,6 +45,7 @@ import {MatTableModule} from "@angular/material/table";
 		PageNotFoundComponent,
 		LoginComponent,
 		OrderViewComponent,
+		FooterComponent,
 	],
 	imports: [
 		BrowserModule,
