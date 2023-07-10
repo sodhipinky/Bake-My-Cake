@@ -1,3 +1,16 @@
 {
-	"customers": []
+	"customers": [
+		{
+			"id": 6,
+			"name": "pinky",
+			"email": "pinky@gmail.com",
+			"phone": "8989898989",
+			"address": {
+				"street": "123",
+				"city": "qwe",
+				"state": "qwe",
+				"pinCode": "110011"
+			}
+		}
+	]
 }

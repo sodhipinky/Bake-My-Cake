@@ -14,11 +14,11 @@ import {CustomerService} from "../../services/customer.service";
 	styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent implements OnInit {
-	product: Product = new Product(0, '', '', '', 0, '', '', 0);
-	customer: Customer = new Customer(0, '', '', '', {street: '', city: '', state: '', pinCode: 0})
+	product: Product | undefined
+	customer: Customer = new Customer(0, '', '', '', {street: '', city: '', state: '', pinCode: 0});
+	order: Order | undefined
 	quantity: number = 0;
 	amount: number = 0;
-	order: Order = new Order(this.product.id, this.customer.id, new Date(), this.quantity, this.amount);
 
 	constructor(private productService: ProductService,
 				private activatedRoute: ActivatedRoute,
@@ -38,23 +38,21 @@ export class CheckoutComponent implements OnInit {
 		});
 	}
 
-	submitCustomer() {
-		this.customerService.saveCustomer(this.customer).subscribe(customer => {
-			this.order.customerId = customer.id;
-		});
-	}
-
-	submitOrder() {
-		this.orderService.saveOrder(this.order).subscribe(order => {
-			this.order.id = order.id;
-		});
-	}
-
 	submit() {
-		this.submitCustomer();
-		this.submitOrder();
-		this.snackbar.open('Order Placed Successfully', 'Dismiss', {
-			duration: 3000
+		this.customerService.saveCustomer(this.customer).subscribe(customer => {
+			this.customer = customer;
+			this.orderService.saveOrder(new Order(
+				this.product?.id ?? 0,
+				this.customer.id,
+				new Date(),
+				this.quantity,
+				this.amount
+			)).subscribe(order => {
+				this.order = order;
+				this.snackbar.open('Order Placed Successfully', 'Dismiss', {
+					duration: 5000
+				});
+			})
 		});
 	}
 }

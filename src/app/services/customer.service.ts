@@ -13,7 +13,7 @@ export class CustomerService {
 	constructor(private httpClient: HttpClient) {
 	}
 
-	saveCustomer(customer: Customer): Observable<Customer> {
+	saveCustomer(customer: Customer | undefined): Observable<Customer> {
 		return this.httpClient.post<Customer>(this.url, customer);
 	}
 }

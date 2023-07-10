@@ -9,7 +9,6 @@ export class Customer {
 			city: string,
 			state: string,
 			pinCode: number
-		}
-	) {
+		}) {
 	}
 }

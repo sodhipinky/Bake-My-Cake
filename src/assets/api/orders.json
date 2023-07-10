@@ -1,3 +1,12 @@
 {
-	"orders": []
+	"orders": [
+		{
+			"productId": 5,
+			"customerId": 6,
+			"date": "2023-07-10T12:07:44.934Z",
+			"quantity": "2",
+			"amount": 1698,
+			"id": 1
+		}
+	]
 }

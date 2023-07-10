@@ -37,7 +37,7 @@
 			<h2 class="fw-bold" style="font-family: 'JetBrains Mono', monospace; color: rebeccapurple">
 				We need the following details for placing your order!
 			</h2>
-			<form #customerDetailForm="ngForm" class="mb-3">
+			<form #customerDetailForm="ngForm" (ngSubmit)="submit()" class="mb-3">
 				<mat-form-field appearance="outline" style="width:60%;">
 					<mat-label>Your Name</mat-label>
 					<input #name="ngModel" [(ngModel)]="customer.name" matInput name="name" required>
