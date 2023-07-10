@@ -1,1 +1,115 @@
-<p>checkout works!</p>
+<div class="container-fluid mt-3 ms-5">
+	<div class="row">
+		<div class="col-5">
+			<h2 class="fw-bold" style="font-family: 'JetBrains Mono', monospace; color: rebeccapurple">
+				You've Got Taste, My Friend!
+			</h2>
+			<h2>
+				You Chose
+				<span class="fw-bold" style="font-family: 'JetBrains Mono', monospace; color: rebeccapurple">
+					 {{quantity}} {{product?.unit}}(s) of {{product?.name}}!
+				</span>
+			</h2>
+			<mat-card class="rounded-4">
+				<mat-card-header>
+					<mat-card-title>
+						<h1 class="fw-bold" style="color: rebeccapurple">{{product?.name}}</h1>
+					</mat-card-title>
+				</mat-card-header>
+				<mat-divider></mat-divider>
+				<mat-card-content class="mb-2 mt-2">
+					<img alt="{{product?.imageUrl}}" class="card-img-top img-fluid mb-3" mat-card-image
+						 src="{{product?.imageUrl}}">
+				</mat-card-content>
+				<mat-divider></mat-divider>
+				<mat-card-footer>
+					<h2 class="mt-3 ms-3 fw-bold"
+						style="font-family: 'JetBrains Mono', monospace; color: rebeccapurple">Price:
+						₹. {{product?.price}}
+						per {{product?.unit}}</h2>
+				</mat-card-footer>
+			</mat-card>
+		</div>
+		<div class="col-7 text-center">
+			<h2 class="fw-bold" style="font-family: 'JetBrains Mono', monospace; color: rebeccapurple">
+				We need the following details for placing your order!
+			</h2>
+			<form #customerDetailForm="ngForm" class="mb-3">
+				<mat-form-field appearance="outline" style="width:60%;">
+					<mat-label>Your Name</mat-label>
+					<input #name="ngModel" [(ngModel)]="customer.name" matInput name="name" required>
+					<mat-error *ngIf="name?.errors?.['required']">
+						Please enter your name
+					</mat-error>
+				</mat-form-field>
+				<mat-form-field appearance="outline" style="width:60%;">
+					<mat-label>Your email</mat-label>
+					<input #email="ngModel" [(ngModel)]="customer.email" matInput name="email"
+						   pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required
+						   type="email">
+					<mat-error *ngIf="email?.errors?.['required']">
+						Please enter your email
+					</mat-error>
+					<mat-error *ngIf="email?.errors?.['pattern']">
+						Please enter a valid email
+					</mat-error>
+				</mat-form-field>
+				<mat-form-field appearance="outline" style="width:60%;">
+					<mat-label>Your Contact Number</mat-label>
+					<input #phone="ngModel" [(ngModel)]="customer.phone" matInput name="phone"
+						   pattern="[789][0-9]{9}" required
+						   type="tel">
+					<mat-error *ngIf="phone?.errors?.['required']">
+						Please enter your contact number
+					</mat-error>
+					<mat-error *ngIf="phone?.errors?.['pattern']">
+						Please enter a valid contact number containing 10 digits starting with 7/8/9
+					</mat-error>
+				</mat-form-field>
+				<h2 class="fw-bold" style="font-family: 'JetBrains Mono', monospace; color: rebeccapurple">
+					Your Address
+				</h2>
+				<mat-form-field appearance="outline" style="width:60%;">
+					<mat-label>Street</mat-label>
+					<input #street="ngModel" [(ngModel)]="customer.address.street" matInput name="street" required>
+					<mat-error *ngIf="street?.errors?.['required']">
+						Please enter your street
+					</mat-error>
+				</mat-form-field>
+				<mat-form-field appearance="outline" style="width:60%;">
+					<mat-label>City</mat-label>
+					<input #city="ngModel" [(ngModel)]="customer.address.city" matInput name="city" required>
+					<mat-error *ngIf="city?.errors?.['required']">
+						Please enter your city
+					</mat-error>
+				</mat-form-field>
+				<mat-form-field appearance="outline" style="width:60%;">
+					<mat-label>State</mat-label>
+					<input #state="ngModel" [(ngModel)]="customer.address.state" matInput name="state" required>
+					<mat-error *ngIf="state?.errors?.['required']">
+						Please enter your state
+					</mat-error>
+				</mat-form-field>
+				<mat-form-field appearance="outline" style="width:60%;">
+					<mat-label>PIN code</mat-label>
+					<input #pinCode="ngModel" [(ngModel)]="customer.address.pinCode" matInput name="pinCode"
+						   pattern="\d{6}$" required>
+					<mat-error *ngIf="pinCode?.errors?.['required']">
+						Please enter your PIN code
+					</mat-error>
+					<mat-error *ngIf="pinCode?.errors?.['pattern']">
+						Please enter a valid PIN code containing 6 digits
+					</mat-error>
+				</mat-form-field>
+				<br>
+				<button [disabled]="customerDetailForm.invalid" class="me-3 fw-bold" color="primary" mat-raised-button
+						type="button">
+					Submit
+				</button>
+				<button class="fw-bold" color="accent" mat-raised-button type="reset">
+					Reset
+				</button>
+			</form>
+		</div>
+	</div>
+</div>

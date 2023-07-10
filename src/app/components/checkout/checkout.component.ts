@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Product} from "../../models/product.model";
 import {ProductService} from "../../services/product.service";
 import {ActivatedRoute} from "@angular/router";
+import {Customer} from "../../models/customer.model";
 
 @Component({
 	selector: 'app-checkout',
@@ -10,6 +11,7 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class CheckoutComponent implements OnInit {
 	product: Product | undefined;
+	customer: Customer = new Customer(0, '', '', '', {street: '', city: '', state: '', pinCode: 0})
 	quantity: number = 0;
 
 	constructor(private productService: ProductService,
