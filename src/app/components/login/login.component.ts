@@ -20,7 +20,7 @@ export class LoginComponent {
 		LoginComponent.isLoggedIn = this.username === 'admin' && this.password === 'admin';
 		this.loginEvent.emit(LoginComponent.isLoggedIn);
 		if (LoginComponent.isLoggedIn) {
-			this.router.navigate(['/products']);
+			this.router.navigate(['/orders']);
 		}
 	}
 }

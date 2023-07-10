@@ -5,6 +5,7 @@ import {ProductDetailComponent} from "./components/product-detail/product-detail
 import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.component";
 import {CheckoutComponent} from "./components/checkout/checkout.component";
 import {LoginComponent} from "./components/login/login.component";
+import {OrderViewComponent} from "./components/order-view/order-view.component";
 
 const routes: Routes = [
 	{
@@ -22,6 +23,10 @@ const routes: Routes = [
 	{
 		path: 'login',
 		component: LoginComponent
+	},
+	{
+		path: 'orders',
+		component: OrderViewComponent
 	},
 	{
 		path: '',
