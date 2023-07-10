@@ -28,6 +28,7 @@ import {CheckoutComponent} from './components/checkout/checkout.component';
 import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {LoginComponent} from './components/login/login.component';
+import {OrderViewComponent} from './components/order-view/order-view.component';
 
 @NgModule({
 	declarations: [
@@ -41,6 +42,7 @@ import {LoginComponent} from './components/login/login.component';
 		CheckoutComponent,
 		PageNotFoundComponent,
 		LoginComponent,
+		OrderViewComponent,
 	],
 	imports: [
 		BrowserModule,
