@@ -26,6 +26,7 @@ import {ProductDetailComponent} from './components/product-detail/product-detail
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {CheckoutComponent} from './components/checkout/checkout.component';
 import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 @NgModule({
 	declarations: [
@@ -56,7 +57,8 @@ import {PageNotFoundComponent} from './components/page-not-found/page-not-found.
 		MatFormFieldModule,
 		MatInputModule,
 		MatRippleModule,
-		MatTooltipModule
+		MatTooltipModule,
+		MatSnackBarModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
