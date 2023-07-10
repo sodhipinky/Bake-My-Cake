@@ -26,13 +26,13 @@
 			</div>
 			<div class="me-2">
 				<a routerLink="/products" style="text-decoration:none;color:whitesmoke;">
-					<mat-icon class="me-3">home</mat-icon>
+					<mat-icon class="me-3" matTooltip="Home">home</mat-icon>
 				</a>
 				<a routerLink="/login" style="text-decoration:none;color:whitesmoke;">
-					<mat-icon *ngIf="!loggedIn" class="me-3">login</mat-icon>
+					<mat-icon *ngIf="!loggedIn" class="me-3" matTooltip="Login">login</mat-icon>
 				</a>
 				<a routerLink="/login" style="text-decoration:none;color:whitesmoke;">
-					<mat-icon *ngIf="loggedIn" class="me-3">logout</mat-icon>
+					<mat-icon *ngIf="loggedIn" class="me-3" matTooltip="Logout">logout</mat-icon>
 				</a>
 			</div>
 		</mat-toolbar>
