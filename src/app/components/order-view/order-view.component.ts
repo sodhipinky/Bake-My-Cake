@@ -21,6 +21,9 @@ export class OrderViewComponent implements OnInit {
 		this.orderService.getOrders().subscribe(orders => {
 			this.orders = orders;
 		});
+		this.orders.forEach(order => {
+			this.getCustomerById(order.customerId);
+		})
 	}
 
 	getCustomerById(customerId: number) {
