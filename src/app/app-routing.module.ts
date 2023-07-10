@@ -4,6 +4,7 @@ import {ProductViewComponent} from "./components/product-view/product-view.compo
 import {ProductDetailComponent} from "./components/product-detail/product-detail.component";
 import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.component";
 import {CheckoutComponent} from "./components/checkout/checkout.component";
+import {LoginComponent} from "./components/login/login.component";
 
 const routes: Routes = [
 	{
@@ -17,6 +18,10 @@ const routes: Routes = [
 	{
 		path: 'checkout/:id/:quantity',
 		component: CheckoutComponent
+	},
+	{
+		path: '/login',
+		component: LoginComponent
 	},
 	{
 		path: '',
