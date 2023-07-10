@@ -1,21 +1,27 @@
-<div class="container justify-content-center">
+<div class="container text-center mt-3">
 	<div class="row">
 		<div class="col-md-12">
-			<h1>Admin Login</h1>
+			<h1 class="fw-bold" style="font-family: 'JetBrains Mono', monospace; color: rebeccapurple">
+				Admin Login
+			</h1>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-12">
 			<form>
-				<mat-form-field>
+				<mat-form-field appearance="outline" style="width:50%;">
 					<mat-label>Username</mat-label>
-					<input [(ngModel)]="username" matInput type="text">
+					<input [(ngModel)]="username" matInput name="username" type="text">
 				</mat-form-field>
-				<mat-form-field>
+				<br>
+				<mat-form-field appearance="outline" style="width:50%;">
 					<mat-label>Password</mat-label>
-					<input [(ngModel)]="password" matInput type="password">
+					<input [(ngModel)]="password" matInput name="password" type="password">
 				</mat-form-field>
-				<button color="primary" mat-raised-button type="submit">Login</button>
+				<br>
+				<button (click)="login()" class="fs-5" color="primary" mat-raised-button style="width:10%;"
+						type="submit">Login
+				</button>
 			</form>
 		</div>
 	</div>

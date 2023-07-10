@@ -10,7 +10,7 @@ export class LoginComponent {
 	public password: string = '';
 
 	login() {
-		if (this.username == 'admin' && this.password == 'admin') {
+		if (this.username === 'admin' && this.password === 'admin') {
 			alert('Login successful');
 		} else {
 			alert('Invalid credentials');
