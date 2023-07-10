@@ -38,7 +38,7 @@ export class CheckoutComponent implements OnInit {
 
 	submitOrder() {
 		this.orderService.saveOrder(this.order).subscribe(order => {
-			this.snackbar.open('Order place successfully', 'Awesome', {
+			this.snackbar.open('Order placed successfully', 'Awesome', {
 				duration: 3000
 			})
 		});
