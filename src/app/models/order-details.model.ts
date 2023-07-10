@@ -9,10 +9,10 @@ export class OrderDetails {
 		public customerEmail: string,
 		public customerPhone: string,
 		public customerAddress: {
-			customerStreet: string,
-			customerCity: string,
-			customerState: string,
-			customerPinCode: number
+			street: string,
+			city: string,
+			state: string,
+			pinCode: number
 		}
 	) {
 	}
