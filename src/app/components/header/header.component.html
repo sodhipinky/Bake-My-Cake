@@ -12,16 +12,23 @@
 		</mat-nav-list>
 	</mat-sidenav>
 	<mat-sidenav-content>
-		<mat-toolbar color="primary">
-			<button
-				(click)="drawer.toggle()"
-				aria-label="Toggle sidenav"
-				mat-icon-button
-				type="button">
-				<mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-			</button>
-			<img alt="logo" class="me-3" src="assets/images/favicon/favicon-32x32.png">
-			<span class="fw-bold fs-4">Bake My Cake</span>
+		<mat-toolbar class="justify-content-between" color="primary">
+			<div>
+				<button
+					(click)="drawer.toggle()"
+					aria-label="Toggle sidenav"
+					mat-icon-button
+					type="button">
+					<mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+				</button>
+				<img alt="logo" class="me-3" class="mb-2 me-2" src="assets/images/favicon/favicon-32x32.png">
+				<span class="fw-bold fs-4">Bake My Cake</span>
+			</div>
+			<div class="me-2">
+				<mat-icon class="me-3">home</mat-icon>
+				<mat-icon class="me-3">login</mat-icon>
+				<mat-icon class="me-3">logout</mat-icon>
+			</div>
 		</mat-toolbar>
 		<!-- Add Content Here -->
 		<router-outlet></router-outlet>
