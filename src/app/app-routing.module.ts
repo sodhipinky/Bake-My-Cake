@@ -7,6 +7,7 @@ import {CheckoutComponent} from "./components/checkout/checkout.component";
 import {LoginComponent} from "./components/login/login.component";
 import {OrderViewComponent} from "./components/order-view/order-view.component";
 import {authGuard} from "./services/auth.guard";
+import {preventGuard} from "./services/prevent.guard";
 
 const routes: Routes = [
 	{
@@ -19,7 +20,8 @@ const routes: Routes = [
 	},
 	{
 		path: 'checkout/:id/:quantity',
-		component: CheckoutComponent
+		component: CheckoutComponent,
+		canDeactivate: [preventGuard]
 	},
 	{
 		path: 'login',

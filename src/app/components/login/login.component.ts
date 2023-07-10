@@ -1,8 +1,8 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Router} from "@angular/router";
 import {AuthenticationService} from "../../services/authentication.service";
-import {fromEvent, Subject, takeUntil} from "rxjs";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {fromEvent, Subject, takeUntil} from "rxjs";
 
 @Component({
 	selector: 'app-login',
