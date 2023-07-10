@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {ProductViewComponent} from "./components/product-view/product-view.component";
 import {ProductDetailComponent} from "./components/product-detail/product-detail.component";
 import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.component";
+import {CheckoutComponent} from "./components/checkout/checkout.component";
 
 const routes: Routes = [
 	{
@@ -12,6 +13,10 @@ const routes: Routes = [
 	{
 		path: 'products/:id',
 		component: ProductDetailComponent
+	},
+	{
+		path: 'checkout/:id/:quantity',
+		component: CheckoutComponent
 	},
 	{
 		path: '',
