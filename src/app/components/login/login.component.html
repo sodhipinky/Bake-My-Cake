@@ -1,1 +1,22 @@
-<p>login works!</p>
+<div class="container justify-content-center">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Admin Login</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<form>
+				<mat-form-field>
+					<mat-label>Username</mat-label>
+					<input [(ngModel)]="username" matInput type="text">
+				</mat-form-field>
+				<mat-form-field>
+					<mat-label>Password</mat-label>
+					<input [(ngModel)]="password" matInput type="password">
+				</mat-form-field>
+				<button color="primary" mat-raised-button type="submit">Login</button>
+			</form>
+		</div>
+	</div>
+</div>
