@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {Product} from "../../models/product.model";
 
 @Component({
 	selector: 'app-checkout',
@@ -6,5 +7,6 @@ import {Component} from '@angular/core';
 	styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent {
-
+	product: Product | undefined;
+	quantity: number = 0;
 }
