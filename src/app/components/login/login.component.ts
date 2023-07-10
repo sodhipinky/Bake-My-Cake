@@ -8,7 +8,6 @@ import {AuthenticationService} from "../../services/authentication.service";
 	styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-	public static isLoggedIn: boolean = false;
 	username: string = '';
 	password: string = '';
 	@Output()
@@ -19,9 +18,9 @@ export class LoginComponent {
 	}
 
 	login() {
-		LoginComponent.isLoggedIn = this.username === 'admin' && this.password === 'admin';
-		this.loginEvent.emit(LoginComponent.isLoggedIn);
-		if (LoginComponent.isLoggedIn) {
+		if (this.username === 'admin' && this.password === 'admin') {
+			this.authenticationService.login();
+			this.loginEvent.emit(true);
 			this.router.navigate(['/orders']);
 		}
 	}
