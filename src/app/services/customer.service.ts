@@ -16,4 +16,8 @@ export class CustomerService {
 	saveCustomer(customer: Customer | undefined): Observable<Customer> {
 		return this.httpClient.post<Customer>(this.url, customer);
 	}
+
+	getCustomerById(customerId: number): Observable<Customer> {
+		return this.httpClient.get<Customer>(this.url + '/' + customerId);
+	}
 }
