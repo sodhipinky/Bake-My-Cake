@@ -28,4 +28,10 @@ export class HeaderComponent {
 	loginEvent($event: any) {
 		this.loggedIn = !($event instanceof LoginComponent)
 	}
+
+	logout() {
+		this.authenticationService.logout();
+		this.loggedIn = this.authenticationService.isLoggedIn;
+		this.router.navigate(['/login']);
+	}
 }
