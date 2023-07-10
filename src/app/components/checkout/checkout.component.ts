@@ -13,6 +13,7 @@ export class CheckoutComponent implements OnInit {
 	product: Product | undefined;
 	customer: Customer = new Customer(0, '', '', '', {street: '', city: '', state: '', pinCode: 0})
 	quantity: number = 0;
+	amount: number = 0;
 
 	constructor(private productService: ProductService,
 				private activatedRoute: ActivatedRoute) {
@@ -24,6 +25,7 @@ export class CheckoutComponent implements OnInit {
 			this.productService.getProductById(id).subscribe(product => {
 				this.product = product;
 				this.quantity = params['quantity'];
+				this.amount = this.product.price * this.quantity;
 			});
 		});
 	}
