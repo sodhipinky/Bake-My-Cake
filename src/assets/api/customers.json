@@ -11,6 +11,18 @@
 				"state": "qwe",
 				"pinCode": "110011"
 			}
+		},
+		{
+			"id": 7,
+			"name": "Divyansh",
+			"email": "divyansh@gmail.com",
+			"phone": "9876543210",
+			"address": {
+				"street": "street",
+				"city": "city",
+				"state": "state",
+				"pinCode": "000000"
+			}
 		}
 	]
 }

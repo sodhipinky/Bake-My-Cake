@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Product} from "../../models/product.model";
 import {ProductService} from "../../services/product.service";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {Customer} from "../../models/customer.model";
 import {Order} from "../../models/order.model";
 import {OrderService} from "../../services/order.service";
@@ -24,6 +24,7 @@ export class CheckoutComponent implements OnInit {
 				private activatedRoute: ActivatedRoute,
 				private orderService: OrderService,
 				private customerService: CustomerService,
+				private router: Router,
 				private snackbar: MatSnackBar) {
 	}
 
@@ -47,12 +48,14 @@ export class CheckoutComponent implements OnInit {
 				new Date(),
 				this.quantity,
 				this.amount
-			)).subscribe(order => {
-				this.order = order;
-				this.snackbar.open('Order Placed Successfully', 'Dismiss', {
-					duration: 5000
-				});
-			})
+			))
+				.subscribe(order => {
+					this.order = order;
+					this.snackbar.open('Order Placed Successfully', 'Dismiss', {
+						duration: 5000
+					});
+				})
 		});
+		this.router.navigate(['/products']);
 	}
 }
