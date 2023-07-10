@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Product} from "../../models/product.model";
 import {ProductService} from "../../services/product.service";
 import {ActivatedRoute} from "@angular/router";
@@ -8,11 +8,21 @@ import {ActivatedRoute} from "@angular/router";
 	templateUrl: './checkout.component.html',
 	styleUrls: ['./checkout.component.css']
 })
-export class CheckoutComponent {
+export class CheckoutComponent implements OnInit {
 	product: Product | undefined;
 	quantity: number = 0;
 
 	constructor(private productService: ProductService,
-				privateActivatedRoute: ActivatedRoute) {
+				private activatedRoute: ActivatedRoute) {
+	}
+
+	ngOnInit(): void {
+		this.activatedRoute.params.subscribe(params => {
+			const id = params['id'];
+			this.productService.getProductById(id).subscribe(product => {
+				this.product = product;
+				this.quantity = params['quantity'];
+			});
+		});
 	}
 }
