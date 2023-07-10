@@ -28,13 +28,18 @@
 					<mat-icon *ngFor="let index of ratingArray" class="ms-2" color="primary">stars</mat-icon>
 				</mat-card-footer>
 				<mat-card-actions class="d-flex justify-content-around">
-					<button class="mb-4" color="warn" mat-fab matTooltip="Remove">
+					<button
+						(click)="quantity.value = String(Number.parseInt(quantity.value)<=0?0:String(Number.parseInt(quantity.value)-1))"
+						class="mb-4"
+						color="warn" mat-fab matTooltip="Remove">
 						<mat-icon>remove</mat-icon>
 					</button>
 					<mat-form-field appearance="outline" class="col-8 ms-2 me-2">
 						<input #quantity matInput name="quantity" required type="text" value="1">
 					</mat-form-field>
-					<button class="mb-4" color="accent" mat-fab matTooltip="Add">
+					<button (click)="quantity.value = String(Number.parseInt(quantity.value)+1)" class="mb-4"
+							color="accent" mat-fab
+							matTooltip="Add">
 						<mat-icon>add</mat-icon>
 					</button>
 				</mat-card-actions>

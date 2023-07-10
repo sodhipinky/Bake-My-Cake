@@ -11,7 +11,9 @@ import {Product} from "../../models/product.model";
 export class ProductDetailComponent implements OnInit {
 	product: Product | undefined;
 	ratingArray: number[] = [];
+	value: number = 0;
 	protected readonly Number = Number;
+	protected readonly String = String;
 
 	constructor(private activatedRoute: ActivatedRoute,
 				private productService: ProductService,
