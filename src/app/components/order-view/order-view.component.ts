@@ -22,4 +22,10 @@ export class OrderViewComponent implements OnInit {
 			this.orders = orders;
 		});
 	}
+
+	getCustomerById(customerId: number) {
+		this.customerService.getCustomerById(customerId).subscribe(customer => {
+			this.customer = customer;
+		});
+	}
 }
