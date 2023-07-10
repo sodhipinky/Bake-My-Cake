@@ -19,6 +19,7 @@ export class CheckoutComponent implements OnInit {
 	order: Order | undefined
 	quantity: number = 0;
 	amount: number = 0;
+	submitStatus: boolean = false;
 
 	constructor(private productService: ProductService,
 				private activatedRoute: ActivatedRoute,
