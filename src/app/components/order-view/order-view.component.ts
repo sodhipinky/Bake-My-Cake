@@ -11,7 +11,7 @@ import {CustomerService} from "../../services/customer.service";
 })
 export class OrderViewComponent implements OnInit {
 	orders: Order[] = [];
-	customer: Customer | undefined;
+	customers: Customer[] = [];
 
 	constructor(private orderService: OrderService,
 				private customerService: CustomerService) {
@@ -23,7 +23,7 @@ export class OrderViewComponent implements OnInit {
 		});
 		this.orders.forEach(order => {
 			this.customerService.getCustomerById(order.customerId).subscribe(customer => {
-				this.customer = customer;
+				this.customers.push(customer);
 			})
 		})
 	}
