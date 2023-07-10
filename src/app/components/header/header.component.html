@@ -21,16 +21,22 @@
 					type="button">
 					<mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
 				</button>
-				<img alt="logo" class="me-3" class="mb-2 me-2" src="assets/images/favicon/favicon-32x32.png">
+				<img alt="logo" class="me-3 mb-2" src="assets/images/favicon/favicon-32x32.png">
 				<span class="fw-bold fs-4">Bake My Cake</span>
 			</div>
 			<div class="me-2">
-				<mat-icon class="me-3">home</mat-icon>
-				<mat-icon *ngIf="!loggedIn" class="me-3">login</mat-icon>
-				<mat-icon *ngIf="loggedIn" class="me-3">logout</mat-icon>
+				<a routerLink="/products" style="text-decoration:none;color:whitesmoke;">
+					<mat-icon class="me-3">home</mat-icon>
+				</a>
+				<a routerLink="/login" style="text-decoration:none;color:whitesmoke;">
+					<mat-icon *ngIf="!loggedIn" class="me-3">login</mat-icon>
+				</a>
+				<a routerLink="/login" style="text-decoration:none;color:whitesmoke;">
+					<mat-icon *ngIf="loggedIn" class="me-3">logout</mat-icon>
+				</a>
 			</div>
 		</mat-toolbar>
 		<!-- Add Content Here -->
-		<router-outlet></router-outlet>
+		<router-outlet (activate)="loginEvent($event)"></router-outlet>
 	</mat-sidenav-content>
 </mat-sidenav-container>
