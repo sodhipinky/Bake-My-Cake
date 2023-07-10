@@ -26,8 +26,8 @@
 			</div>
 			<div class="me-2">
 				<mat-icon class="me-3">home</mat-icon>
-				<mat-icon class="me-3">login</mat-icon>
-				<mat-icon class="me-3">logout</mat-icon>
+				<mat-icon *ngIf="!loggedIn" class="me-3">login</mat-icon>
+				<mat-icon *ngIf="loggedIn" class="me-3">logout</mat-icon>
 			</div>
 		</mat-toolbar>
 		<!-- Add Content Here -->
