@@ -6,14 +6,11 @@ import {Component} from '@angular/core';
 	styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-	public username: string = '';
-	public password: string = '';
+	username: string = '';
+	password: string = '';
+	public isLoggedIn: boolean = false;
 
 	login() {
-		if (this.username === 'admin' && this.password === 'admin') {
-			alert('Login successful');
-		} else {
-			alert('Invalid credentials');
-		}
+		this.isLoggedIn = this.username === 'admin' && this.password === 'admin';
 	}
 }
