@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 import {Product} from "../../models/product.model";
+import {ProductService} from "../../services/product.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
 	selector: 'app-checkout',
@@ -9,4 +11,8 @@ import {Product} from "../../models/product.model";
 export class CheckoutComponent {
 	product: Product | undefined;
 	quantity: number = 0;
+
+	constructor(private productService: ProductService,
+				privateActivatedRoute: ActivatedRoute) {
+	}
 }
