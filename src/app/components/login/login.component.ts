@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Output} from '@angular/core';
 import {Router} from "@angular/router";
+import {AuthenticationService} from "../../services/authentication.service";
 
 @Component({
 	selector: 'app-login',
@@ -13,7 +14,8 @@ export class LoginComponent {
 	@Output()
 	loginEvent: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-	constructor(private router: Router) {
+	constructor(private router: Router,
+				private authenticationService: AuthenticationService) {
 	}
 
 	login() {
