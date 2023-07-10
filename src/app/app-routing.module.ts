@@ -6,6 +6,7 @@ import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.
 import {CheckoutComponent} from "./components/checkout/checkout.component";
 import {LoginComponent} from "./components/login/login.component";
 import {OrderViewComponent} from "./components/order-view/order-view.component";
+import {authGuard} from "./services/auth.guard";
 
 const routes: Routes = [
 	{
@@ -22,11 +23,12 @@ const routes: Routes = [
 	},
 	{
 		path: 'login',
-		component: LoginComponent
+		component: LoginComponent,
 	},
 	{
 		path: 'orders',
-		component: OrderViewComponent
+		component: OrderViewComponent,
+		canActivate: [authGuard]
 	},
 	{
 		path: '',
