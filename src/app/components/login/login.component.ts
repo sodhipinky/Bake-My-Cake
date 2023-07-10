@@ -6,11 +6,11 @@ import {Component} from '@angular/core';
 	styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+	public static isLoggedIn: boolean = false;
 	username: string = '';
 	password: string = '';
-	public isLoggedIn: boolean = false;
 
 	login() {
-		this.isLoggedIn = this.username === 'admin' && this.password === 'admin';
+		LoginComponent.isLoggedIn = this.username === 'admin' && this.password === 'admin';
 	}
 }
