@@ -5,6 +5,7 @@ import {ActivatedRoute} from "@angular/router";
 import {Customer} from "../../models/customer.model";
 import {Order} from "../../models/order.model";
 import {OrderService} from "../../services/order.service";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
 	selector: 'app-checkout',
@@ -20,7 +21,8 @@ export class CheckoutComponent implements OnInit {
 
 	constructor(private productService: ProductService,
 				private activatedRoute: ActivatedRoute,
-				private orderService: OrderService) {
+				private orderService: OrderService,
+				private snackbar: MatSnackBar) {
 	}
 
 	ngOnInit(): void {
@@ -36,7 +38,9 @@ export class CheckoutComponent implements OnInit {
 
 	submitOrder() {
 		this.orderService.saveOrder(this.order).subscribe(order => {
-			alert('Order placed successfully with order id: ' + order.id);
+			this.snackbar.open('Order place successfully', 'Awesome', {
+				duration: 3000
+			})
 		});
 	}
 }
