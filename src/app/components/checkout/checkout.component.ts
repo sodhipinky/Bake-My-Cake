@@ -3,6 +3,8 @@ import {Product} from "../../models/product.model";
 import {ProductService} from "../../services/product.service";
 import {ActivatedRoute} from "@angular/router";
 import {Customer} from "../../models/customer.model";
+import {Order} from "../../models/order.model";
+import {OrderService} from "../../services/order.service";
 
 @Component({
 	selector: 'app-checkout',
@@ -10,13 +12,15 @@ import {Customer} from "../../models/customer.model";
 	styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent implements OnInit {
-	product: Product | undefined;
+	product: Product = new Product(0, '', '', '', 0, '', '', 0);
 	customer: Customer = new Customer(0, '', '', '', {street: '', city: '', state: '', pinCode: 0})
 	quantity: number = 0;
 	amount: number = 0;
+	order: Order = new Order(this.product.id, this.customer.id, new Date(), this.quantity, this.amount);
 
 	constructor(private productService: ProductService,
-				private activatedRoute: ActivatedRoute) {
+				private activatedRoute: ActivatedRoute,
+				private orderService: OrderService) {
 	}
 
 	ngOnInit(): void {
@@ -27,6 +31,12 @@ export class CheckoutComponent implements OnInit {
 				this.quantity = params['quantity'];
 				this.amount = this.product.price * this.quantity;
 			});
+		});
+	}
+
+	submitOrder() {
+		this.orderService.saveOrder(this.order).subscribe(order => {
+			alert('Order placed successfully with order id: ' + order.id);
 		});
 	}
 }
