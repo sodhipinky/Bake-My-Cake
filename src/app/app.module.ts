@@ -27,6 +27,7 @@ import {MatTooltipModule} from "@angular/material/tooltip";
 import {CheckoutComponent} from './components/checkout/checkout.component';
 import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {LoginComponent} from './components/login/login.component';
 
 @NgModule({
 	declarations: [
@@ -39,6 +40,7 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 		ProductDetailComponent,
 		CheckoutComponent,
 		PageNotFoundComponent,
+		LoginComponent,
 	],
 	imports: [
 		BrowserModule,

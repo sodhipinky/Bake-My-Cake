@@ -52,10 +52,12 @@ export class CheckoutComponent implements OnInit {
 				.subscribe(order => {
 					this.order = order;
 					this.snackbar.open('Order Placed Successfully', 'Dismiss', {
-						duration: 5000
+						duration: 5000,
+						horizontalPosition: 'center',
+						verticalPosition: 'top'
 					});
 				})
+			this.router.navigate(['/products']);
 		});
-		this.router.navigate(['/products']);
 	}
 }
