@@ -6,6 +6,7 @@ import {Customer} from "../../models/customer.model";
 import {Order} from "../../models/order.model";
 import {OrderService} from "../../services/order.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {CustomerService} from "../../services/customer.service";
 
 @Component({
 	selector: 'app-checkout',
@@ -22,6 +23,7 @@ export class CheckoutComponent implements OnInit {
 	constructor(private productService: ProductService,
 				private activatedRoute: ActivatedRoute,
 				private orderService: OrderService,
+				private customerService: CustomerService,
 				private snackbar: MatSnackBar) {
 	}
 
@@ -36,11 +38,15 @@ export class CheckoutComponent implements OnInit {
 		});
 	}
 
+	submitCustomer() {
+		this.customerService.saveCustomer(this.customer).subscribe(customer => {
+			this.order.customerId = customer.id;
+		});
+	}
+
 	submitOrder() {
 		this.orderService.saveOrder(this.order).subscribe(order => {
-			this.snackbar.open('Order placed successfully', 'Awesome', {
-				duration: 3000
-			})
+			this.order.id = order.id;
 		});
 	}
 }
