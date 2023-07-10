@@ -1,0 +1,30 @@
+<table class="table table-hover table-borderless text-center mt-3">
+	<thead style="font-size:1.2rem;">
+	<tr>
+		<th scope="col" style="color:rebeccapurple">Order Id</th>
+		<th scope="col" style="color:rebeccapurple">Order Date</th>
+		<th scope="col" style="color:rebeccapurple">Product Name</th>
+		<th scope="col" style="color:rebeccapurple">Quantity</th>
+		<th scope="col" style="color:rebeccapurple">Price per unit</th>
+		<th scope="col" style="color:rebeccapurple">Ordered By</th>
+		<th scope="col" style="color:rebeccapurple">Customer Email</th>
+		<th scope="col" style="color:rebeccapurple">Customer Phone</th>
+		<th scope="col" style="color:rebeccapurple">Customer Address</th>
+		<th scope="col" style="color:rebeccapurple">Total Bill</th>
+	</tr>
+	</thead>
+	<tbody style="font-size: 1.1rem;">
+	<tr *ngFor="let orderDetail of orderDetails">
+		<th scope="row" style="color:rebeccapurple">{{orderDetail.orderId}}</th>
+		<td>{{orderDetail.orderDate | date}}</td>
+		<td>{{orderDetail.productName}}</td>
+		<td>{{orderDetail.quantity}}</td>
+		<td>₹. {{orderDetail.price}}</td>
+		<td>{{orderDetail.customerName}}</td>
+		<td>{{orderDetail.customerEmail}}</td>
+		<td>{{orderDetail.customerPhone}}</td>
+		<td>{{orderDetail.customerAddress.street}} {{orderDetail.customerAddress.city}} {{orderDetail.customerAddress.state}} {{orderDetail.customerAddress.pinCode}}</td>
+		<td>₹. {{orderDetail.amount}}</td>
+	</tr>
+	</tbody>
+</table>

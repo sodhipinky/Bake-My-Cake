@@ -13,7 +13,6 @@ import {OrderDetails} from "../../models/order-details.model";
 export class OrderViewComponent implements OnInit {
 	orders: Order[] = [];
 	orderDetails: OrderDetails[] = [];
-	protected readonly OrderDetails = OrderDetails;
 
 	constructor(private orderService: OrderService,
 				private customerService: CustomerService,
