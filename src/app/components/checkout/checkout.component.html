@@ -1,19 +1,18 @@
 <div class="container-fluid mt-3 ms-5">
 	<div class="row">
 		<div class="col-5">
-			<h2 class="fw-bold" style="font-family: 'JetBrains Mono', monospace; color: rebeccapurple">
+			<h1 class="fw-bold" style="font-family: 'JetBrains Mono', monospace; color: rebeccapurple">
 				You've Got Taste, My Friend!
-			</h2>
-			<h2>
-				You Chose
-				<span class="fw-bold" style="font-family: 'JetBrains Mono', monospace; color: rebeccapurple">
-					 {{quantity}} {{product?.unit}}(s) of {{product?.name}}!
-				</span>
-			</h2>
-			<mat-card class="rounded-4">
+			</h1>
+			<mat-card class="rounded-4" style="box-shadow: 0 0 10px 0 rgba(10, 20, 30, 0.3);">
 				<mat-card-header>
 					<mat-card-title>
-						<h1 class="fw-bold" style="color: rebeccapurple">{{product?.name}}</h1>
+						<h2 class="fw-bold" style="font-family: 'JetBrains Mono', monospace; color: rebeccapurple">
+							You Chose
+							<span>
+					 			{{quantity}} {{product?.unit}}(s) of {{product?.name}}!
+							</span>
+						</h2>
 					</mat-card-title>
 				</mat-card-header>
 				<mat-divider></mat-divider>
@@ -24,9 +23,13 @@
 				<mat-divider></mat-divider>
 				<mat-card-footer>
 					<h2 class="mt-3 ms-3 fw-bold"
-						style="font-family: 'JetBrains Mono', monospace; color: rebeccapurple">Price:
-						₹. {{product?.price}}
-						per {{product?.unit}}</h2>
+						style="font-family: 'JetBrains Mono', monospace; color: rebeccapurple">
+						Price: ₹. {{product?.price}} per {{product?.unit}}
+					</h2>
+					<h2 class="mt-3 ms-3 fw-bold"
+						style="font-family: 'JetBrains Mono', monospace; color: rebeccapurple">
+						Your Bill: ₹. {{amount}}
+					</h2>
 				</mat-card-footer>
 			</mat-card>
 		</div>
