@@ -29,6 +29,7 @@ import {PageNotFoundComponent} from './components/page-not-found/page-not-found.
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {LoginComponent} from './components/login/login.component';
 import {OrderViewComponent} from './components/order-view/order-view.component';
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
 	declarations: [
@@ -62,7 +63,8 @@ import {OrderViewComponent} from './components/order-view/order-view.component';
 		MatInputModule,
 		MatRippleModule,
 		MatTooltipModule,
-		MatSnackBarModule
+		MatSnackBarModule,
+		MatTableModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

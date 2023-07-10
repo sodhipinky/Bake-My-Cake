@@ -13,6 +13,7 @@ import {OrderDetails} from "../../models/order-details.model";
 export class OrderViewComponent implements OnInit {
 	orders: Order[] = [];
 	orderDetails: OrderDetails[] = [];
+	protected readonly OrderDetails = OrderDetails;
 
 	constructor(private orderService: OrderService,
 				private customerService: CustomerService,
@@ -27,14 +28,15 @@ export class OrderViewComponent implements OnInit {
 					this.productService.getProductById(order.productId).subscribe((product) => {
 						this.orderDetails.push(new OrderDetails(
 							order?.id ?? 0,
+							order.date,
 							product.name,
 							order.quantity,
 							product.price,
-							order.amount,
 							customer.name,
 							customer.email,
 							customer.phone,
-							customer.address
+							customer.address,
+							order.amount,
 						));
 					});
 				});
