@@ -49,4 +49,12 @@ export class CheckoutComponent implements OnInit {
 			this.order.id = order.id;
 		});
 	}
+
+	submit() {
+		this.submitCustomer();
+		this.submitOrder();
+		this.snackbar.open('Order Placed Successfully', 'Dismiss', {
+			duration: 3000
+		});
+	}
 }
