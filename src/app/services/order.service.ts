@@ -15,4 +15,8 @@ export class OrderService {
 	saveOrder(order: Order): Observable<Order> {
 		return this.httpClient.post<Order>(this.url, order);
 	}
+
+	getOrders(): Observable<Array<Order>> {
+		return this.httpClient.get<Array<Order>>(this.url);
+	}
 }
