@@ -12,6 +12,7 @@ export class ProductDetailComponent implements OnInit {
 	product: Product | undefined;
 	ratingArray: number[] = [];
 	value: number = 0;
+	orderProgress: boolean = false;
 	protected readonly Number = Number;
 	protected readonly String = String;
 
@@ -30,9 +31,18 @@ export class ProductDetailComponent implements OnInit {
 				}
 			});
 		});
+		this.orderProgress = false;
 	}
 
 	checkout(quantity: number): void {
+		this.orderProgress = true;
 		this.router.navigate(['/checkout', this.product?.id, quantity]);
+	}
+
+	isOrderProgress(): boolean {
+		if (!this.orderProgress) {
+			return confirm("Are you sure you want to leave this page? Your order will be lost.");
+		}
+		return true;
 	}
 }

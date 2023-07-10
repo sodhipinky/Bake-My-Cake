@@ -16,7 +16,8 @@ const routes: Routes = [
 	},
 	{
 		path: 'products/:id',
-		component: ProductDetailComponent
+		component: ProductDetailComponent,
+		canDeactivate: [preventGuard]
 	},
 	{
 		path: 'checkout/:id/:quantity',
