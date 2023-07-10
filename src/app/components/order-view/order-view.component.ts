@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {Order} from "../../models/order.model";
+import {Customer} from "../../models/customer.model";
 
 @Component({
 	selector: 'app-order-view',
@@ -8,4 +9,5 @@ import {Order} from "../../models/order.model";
 })
 export class OrderViewComponent {
 	orders: Order[] = [];
+	customer: Customer | undefined;
 }
