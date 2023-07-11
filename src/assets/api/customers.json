@@ -59,6 +59,30 @@
 				"state": "UP",
 				"pinCode": "201301"
 			}
+		},
+		{
+			"id": 11,
+			"name": "Vaibhav",
+			"email": "vaibhav@gmail.com",
+			"phone": "7768560912",
+			"address": {
+				"street": "42",
+				"city": "Indore",
+				"state": "MP",
+				"pinCode": "445500"
+			}
+		},
+		{
+			"id": 12,
+			"name": "Kabir",
+			"email": "kabir@gmail.com",
+			"phone": "9980234590",
+			"address": {
+				"street": "456",
+				"city": "Gwalior",
+				"state": "MP",
+				"pinCode": "474001"
+			}
 		}
 	]
 }

@@ -29,6 +29,9 @@
 					<a routerLink="/products" style="text-decoration:none;color:whitesmoke;">
 						<mat-icon class="me-3" matTooltip="Home">home</mat-icon>
 					</a>
+					<a routerLink="/orders" style="text-decoration:none;color:whitesmoke;">
+						<mat-icon *ngIf="loggedIn" class="me-3" matTooltip="View Orders">view_compact_alt</mat-icon>
+					</a>
 					<a routerLink="/login" style="text-decoration:none;color:whitesmoke;">
 						<mat-icon *ngIf="!loggedIn" class="me-3" matTooltip="Login">login</mat-icon>
 					</a>

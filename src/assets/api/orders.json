@@ -39,6 +39,22 @@
 			"quantity": "1",
 			"amount": 35,
 			"id": 5
+		},
+		{
+			"productId": 16,
+			"customerId": 11,
+			"date": "2023-07-11T08:10:12.340Z",
+			"quantity": "1",
+			"amount": 80,
+			"id": 6
+		},
+		{
+			"productId": 17,
+			"customerId": 12,
+			"date": "2023-07-11T08:11:11.548Z",
+			"quantity": "5",
+			"amount": 400,
+			"id": 7
 		}
 	]
 }
