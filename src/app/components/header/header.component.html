@@ -11,8 +11,8 @@
 			<a mat-list-item routerLink="/contact">Contact Us</a>
 		</mat-nav-list>
 	</mat-sidenav>
-	<mat-sidenav-content class="d-flex flex-column justify-content-between">
-		<div class="row-2 sticky-top">
+	<mat-sidenav-content>
+		<div class="sticky-top">
 			<mat-toolbar class="justify-content-between" color="primary">
 				<div>
 					<button
@@ -42,10 +42,8 @@
 			</mat-toolbar>
 		</div>
 		<!-- Add Content Here -->
-		<div class="row-8">
-			<router-outlet (activate)="loginEvent($event)"></router-outlet>
-		</div>
-		<div class="row-2">
+		<router-outlet (activate)="loginEvent($event)"></router-outlet>
+		<div class="mt-5" style="position:fixed;bottom:0; width:100%;">
 			<app-footer></app-footer>
 		</div>
 	</mat-sidenav-content>
