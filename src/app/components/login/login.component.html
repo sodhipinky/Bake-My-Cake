@@ -1,4 +1,4 @@
-<div class="container text-center mt-3">
+<div class="container text-center p-5 rounded-3" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);width:20%;">
 	<div class="row">
 		<div class="col-md-12">
 			<h1 class="fw-bold" style="font-family: 'JetBrains Mono', monospace; color: rebeccapurple">
@@ -9,18 +9,18 @@
 	<div class="row">
 		<div class="col-md-12">
 			<form>
-				<mat-form-field appearance="outline" style="width:50%;">
+				<mat-form-field appearance="outline">
 					<mat-label>Username</mat-label>
 					<input [(ngModel)]="username" matInput name="username" type="text">
 				</mat-form-field>
 				<br>
-				<mat-form-field appearance="outline" style="width:50%;">
+				<mat-form-field appearance="outline">
 					<mat-label>Password</mat-label>
 					<input [(ngModel)]="password" matInput name="password" type="password">
 				</mat-form-field>
 				<br>
-				<button (click)="login()" class="fs-5" color="primary" mat-raised-button style="width:10%;"
-						type="submit">Login
+				<button (click)="login()" class="fs-5" color="primary" mat-raised-button type="submit">
+					Login
 				</button>
 			</form>
 		</div>

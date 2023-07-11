@@ -12,7 +12,7 @@
 		</mat-nav-list>
 	</mat-sidenav>
 	<mat-sidenav-content class="d-flex flex-column justify-content-between">
-		<div>
+		<div class="row-2">
 			<mat-toolbar class="justify-content-between" color="primary">
 				<div>
 					<button
@@ -39,10 +39,10 @@
 			</mat-toolbar>
 		</div>
 		<!-- Add Content Here -->
-		<div>
+		<div class="row-8">
 			<router-outlet (activate)="loginEvent($event)"></router-outlet>
 		</div>
-		<div>
+		<div class="row-2">
 			<app-footer></app-footer>
 		</div>
 	</mat-sidenav-content>
