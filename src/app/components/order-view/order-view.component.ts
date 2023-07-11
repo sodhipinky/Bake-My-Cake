@@ -42,5 +42,10 @@ export class OrderViewComponent implements OnInit {
 			});
 		});
 		console.log(this.orderDetails)
+		this.sortOrdersById();
+	}
+
+	sortOrdersById() {
+		this.orderDetails.sort((a, b) => a.orderId - b.orderId);
 	}
 }

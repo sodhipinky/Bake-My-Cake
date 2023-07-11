@@ -83,6 +83,54 @@
 				"state": "MP",
 				"pinCode": "474001"
 			}
+		},
+		{
+			"id": 13,
+			"name": "Ashima",
+			"email": "ashima@gmail.com",
+			"phone": "8189765412",
+			"address": {
+				"street": "Mantova Street",
+				"city": "Delhi",
+				"state": "Delhi",
+				"pinCode": "110011"
+			}
+		},
+		{
+			"id": 14,
+			"name": "Shruti",
+			"email": "shruti@gmail.com",
+			"phone": "9015673781",
+			"address": {
+				"street": "56",
+				"city": "Noida",
+				"state": "UP",
+				"pinCode": "201301"
+			}
+		},
+		{
+			"id": 15,
+			"name": "Pinky",
+			"email": "pinky@gmail.com",
+			"phone": "9008994321",
+			"address": {
+				"street": "Nehru street",
+				"city": "Delhi",
+				"state": "Delhi",
+				"pinCode": "110011"
+			}
+		},
+		{
+			"id": 16,
+			"name": "Sonia",
+			"email": "sonia@gmail.com",
+			"phone": "7734589011",
+			"address": {
+				"street": "Shashtri Nagar",
+				"city": "Kanpur",
+				"state": "UP",
+				"pinCode": "200100"
+			}
 		}
 	]
 }

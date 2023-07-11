@@ -32,6 +32,6 @@ export class HeaderComponent {
 	logout() {
 		this.authenticationService.logout();
 		// this.loggedIn = this.authenticationService.isLoggedIn;
-		this.router.navigate(['/login']);
+		this.router.navigate(['/products']);
 	}
 }
