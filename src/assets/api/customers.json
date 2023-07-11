@@ -143,6 +143,18 @@
 				"state": "st1",
 				"pinCode": "119900"
 			}
+		},
+		{
+			"id": 18,
+			"name": "Divyansh",
+			"email": "divyansh@gmail.com",
+			"phone": "7788990011",
+			"address": {
+				"street": "kuch bhi",
+				"city": "koi bhi",
+				"state": "kahin bhi",
+				"pinCode": "000000"
+			}
 		}
 	]
 }

@@ -95,6 +95,14 @@
 			"quantity": "2",
 			"amount": 1698,
 			"id": 12
+		},
+		{
+			"productId": 6,
+			"customerId": 18,
+			"date": "2023-07-11T09:18:08.611Z",
+			"quantity": "3",
+			"amount": 105,
+			"id": 13
 		}
 	]
 }
