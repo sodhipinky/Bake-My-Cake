@@ -16,7 +16,7 @@ export class FilterProductComponent {
 		'Cupcake',
 		'Muffin'
 	]
-	selectedCategory: string = ''
+	selectedCategory: string = 'All'
 
 	@Output()
 	filterProductEvent: EventEmitter<string> = new EventEmitter<string>();
