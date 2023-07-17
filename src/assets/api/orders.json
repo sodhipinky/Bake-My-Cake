@@ -103,6 +103,14 @@
 			"quantity": "3",
 			"amount": 105,
 			"id": 13
+		},
+		{
+			"productId": 14,
+			"customerId": 19,
+			"date": "2023-07-11T16:43:02.275Z",
+			"quantity": "3",
+			"amount": 360,
+			"id": 14
 		}
 	]
 }
